@@ -102,20 +102,20 @@ class Video(Resource):
     @marshal_with(resource_fields)
     def patch(self, video_id):
         args = video_patch_args.parse_args()
-        result = VideoModel.query.filter_by(id=video_id).first()
-        if not result:
+        existing_video = VideoModel.query.filter_by(id=video_id).first()
+        if not existing_video:
             abort(404, message="Video {video_id} not exist")
 
         if args['name']:
-            VideoModel.name = args['name']
+            existing_video.name = args['name']
         if args['views']:
-            VideoModel.views = args['views']
+            existing_video.views = args['views']
         if args['likes']:
-            VideoModel.likes = args['likes']
+            existing_video.likes = args['likes']
 
         # 이미 session에 있다면 db.session.add(video) 필요없다
         db.session.commit()
-        return result
+        return existing_video
 
     def delete(self, video_id):
         existing_video = VideoModel.query.filter_by(id=video_id).first()
