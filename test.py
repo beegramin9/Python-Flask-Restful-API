@@ -45,8 +45,8 @@ updated_data = [{
 
 """ Patch request """
 print('Updated Data')
-for i in range(len(data)):
-    response = requests.get(BASE + 'video/' + str(i), data[i])
+for i in range(len(updated_data)):
+    response = requests.patch(BASE + 'video/' + str(i), updated_data[i])
     print(response.json())
     
 """ Delete request """
