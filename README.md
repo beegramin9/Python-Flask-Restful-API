@@ -20,7 +20,7 @@ python main.py
 
 ## Overview
 
-![PaintBrush](https://user-images.githubusercontent.com/58083434/130402852-f8f8dd81-9118-4658-ad5d-43e22f127afa.gif)
+![Flask](https://user-images.githubusercontent.com/58083434/131241846-68a75bb6-3ab1-4378-a937-6d3fac058cf7.gif)
 
 ## Technology Stack
 
@@ -32,7 +32,7 @@ python main.py
 
 &nbsp; This is a simple Restful API built with Flask and SQLAlchemy. SQLAlchemy supports ORM designed to fully support CRUD interactions easily.
 
-<br/><br/>
+<br/>
 &nbsp; Flask와 SQLAlchemy로 만들어진 간단한 Restful API입니다. SQLAlchemy는 CRUD를 위한 ORM(객체 관계 매핑)을 지원합니다.
 
 ## Main Feature Code
